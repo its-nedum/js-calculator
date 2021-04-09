@@ -73,6 +73,6 @@
 }
 
 /* change number color onClick */
-.num:active, .ops:active {
+.num:active, .ops:active, .clear:active {
     background-color: lavender;
 }
