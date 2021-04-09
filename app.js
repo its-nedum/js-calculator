@@ -19,9 +19,9 @@ const plus = document.getElementById('plus');
 // equal to
 const equal = document.getElementById('equalto');
 
-/*
- * get all numbers clicked before an operator
-*/
+// result div
+const answer = document.getElementById('result');
+
 // collect the numbers clicked into an array
 let before = [];
 let operator = null;
@@ -41,7 +41,7 @@ plus.addEventListener('click', () => {
     operator = "+"
 });
 
-
+// fill the array with clicked numbers
 n1.addEventListener('click', (e) => {
     if (operator === null){
         before.push(e.target.innerText)
@@ -119,16 +119,14 @@ ndot.addEventListener('click', (e) => {
         after.push(e.target.innerText) 
     }    
 });
-      
-
-
-
+    
+// perform the calculation and display result
 equal.addEventListener('click', () => {
     let result
     // clean up the before array
-    let operand1 = Number(before.join().replace(/,/g, ''));
+    let operand1 = parseFloat(before.join().replace(/,/g, ''));
     // clean up the after array
-    let operand2 = Number(after.join().replace(/,/g, ''));
+    let operand2 = parseFloat(after.join().replace(/,/g, ''));
     // calculate
     switch (operator) {
         case '/':
@@ -144,6 +142,12 @@ equal.addEventListener('click', () => {
             result = operand1 + operand2
             break;
     }
-    console.log(result)
-    return result;
+
+    answer.innerText = result;
+
+    // reset store
+    before = [];
+    after = [];
+    operator = null;
+    
 });
