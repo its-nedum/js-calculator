@@ -5,12 +5,11 @@
     grid-template-rows: repeat(5, 100px);
     grid-template-areas: 
         "first  first  first  first"
+        "second second second fourth"
         "second second second third"
         "second second second third"
         "second second second third"
         "second second second third";
-    border: rgb(236, 224, 224) 3px solid;
-    max-width: 430px;
     border-radius: 2px;
 }
 
@@ -24,6 +23,10 @@
 
 .operators {
     grid-area: third;
+}
+
+.clear {
+    grid-area: fourth;
 }
 
 .numbers {
@@ -58,6 +61,15 @@
 
 .ops {
     background-color: rgb(229, 255, 0)
+}
+
+.clear {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    background-color: red;
+    font-size: 35px;
 }
 
 /* change number color onClick */

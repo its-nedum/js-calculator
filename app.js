@@ -22,6 +22,16 @@ const equal = document.getElementById('equalto');
 // result div
 const answer = document.getElementById('result');
 
+// clear div
+const clear = document.getElementById('clear');
+clear.addEventListener('click', () => {
+    // reset store
+    before = [];
+    after = [];
+    operator = null;
+    answer.innerText = '';
+})
+
 // collect the numbers clicked into an array
 let before = [];
 let operator = null;
@@ -141,6 +151,10 @@ equal.addEventListener('click', () => {
         default:
             result = operand1 + operand2
             break;
+    }
+
+    if (result === NaN) {
+        answer.innerText = 0;
     }
 
     answer.innerText = result;
