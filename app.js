@@ -42,95 +42,121 @@ let after = [];
 
 // set operator
 divide.addEventListener('click', () => {
-    operator = "/"
+    operator = "/";
+    answer.innerText = "/";
 });
 times.addEventListener('click', () => {
-    operator = "*"
+    operator = "*";
+    answer.innerText = "*";
 });
 minus.addEventListener('click', () => {
-    operator = "-"
+    operator = "-";
+    answer.innerText = "-";
 });
 plus.addEventListener('click', () => {
-    operator = "+"
+    operator = "+";
+    answer.innerText = "+"
 });
 
 // fill the array with clicked numbers
 n1.addEventListener('click', (e) => {
     if (operator === null){
         before.push(e.target.innerText)
+        answer.innerText = parseFloat(before.join().replace(/,/g, ''))
     }else{
         after.push(e.target.innerText) 
-    }  
+        answer.innerText = parseFloat(after.join().replace(/,/g, ''))
+    }
 });
 n2.addEventListener('click', (e) => {
     if (operator === null){
         before.push(e.target.innerText)
+        answer.innerText = parseFloat(before.join().replace(/,/g, ''))
     }else{
         after.push(e.target.innerText) 
+        answer.innerText = parseFloat(after.join().replace(/,/g, ''))
     }    
 });
 n3.addEventListener('click', (e) => {
     if (operator === null){
         before.push(e.target.innerText)
+        answer.innerText = parseFloat(before.join().replace(/,/g, ''))
     }else{
         after.push(e.target.innerText) 
-    }    
+        answer.innerText = parseFloat(after.join().replace(/,/g, ''))
+    }   
 });
 n4.addEventListener('click', (e) => {
     if (operator === null){
         before.push(e.target.innerText)
+        answer.innerText = parseFloat(before.join().replace(/,/g, ''))
     }else{
         after.push(e.target.innerText) 
-    }    
+        answer.innerText = parseFloat(after.join().replace(/,/g, ''))
+    }  
 });
 n5.addEventListener('click', (e) => {
     if (operator === null){
         before.push(e.target.innerText)
+        answer.innerText = parseFloat(before.join().replace(/,/g, ''))
     }else{
         after.push(e.target.innerText) 
-    }    
+        answer.innerText = parseFloat(after.join().replace(/,/g, ''))
+    }   
 });
 n6.addEventListener('click', (e) => {
     if (operator === null){
         before.push(e.target.innerText)
+        answer.innerText = parseFloat(before.join().replace(/,/g, ''))
     }else{
         after.push(e.target.innerText) 
+        answer.innerText = parseFloat(after.join().replace(/,/g, ''))
     }    
 });
 n7.addEventListener('click', (e) => {
     if (operator === null){
         before.push(e.target.innerText)
+        answer.innerText = parseFloat(before.join().replace(/,/g, ''))
     }else{
         after.push(e.target.innerText) 
-    }    
+        answer.innerText = parseFloat(after.join().replace(/,/g, ''))
+    }   
 });
 n8.addEventListener('click', (e) => {
     if (operator === null){
         before.push(e.target.innerText)
+        answer.innerText = parseFloat(before.join().replace(/,/g, ''))
     }else{
         after.push(e.target.innerText) 
-    }    
+        answer.innerText = parseFloat(after.join().replace(/,/g, ''))
+    }   
 });
 n9.addEventListener('click', (e) => {
     if (operator === null){
         before.push(e.target.innerText)
+        answer.innerText = parseFloat(before.join().replace(/,/g, ''))
     }else{
         after.push(e.target.innerText) 
+        answer.innerText = parseFloat(after.join().replace(/,/g, ''))
     }    
 });
 n0.addEventListener('click', (e) => {
     if (operator === null){
         before.push(e.target.innerText)
+        answer.innerText = parseFloat(before.join().replace(/,/g, ''))
     }else{
         after.push(e.target.innerText) 
+        answer.innerText = parseFloat(after.join().replace(/,/g, ''))
     }    
 });
 ndot.addEventListener('click', (e) => {
     if (operator === null){
         before.push(e.target.innerText)
+        answer.innerText = parseFloat(before.join().replace(/,/g, ''))
     }else{
         after.push(e.target.innerText) 
-    }    
+        answer.innerText = parseFloat(after.join().replace(/,/g, ''))
+    }   
 });
     
 // perform the calculation and display result
